@@ -2,10 +2,12 @@
 FinTech A/B Testing – Signup & Activation Funnel
 This project analyzes an A/B test for a FinTech onboarding funnel, from signup to first transaction.
 Objective
+
 Evaluate whether version B of the signup flow improves user activation compared to version A, using:
 •	Signup completion
 •	Deposit rate
 •	First transaction rate
+
 Dataset
 •	50K users
 •	Columns:
@@ -16,11 +18,13 @@ o	clicked_cta
 o	completed_signup
 o	made_deposit
 o	first_transaction
+
 Methods
 •	Python (Pandas, NumPy)
 •	A/B Testing
 •	Statistical significance (Z-test)
 •	Funnel and conversion analysis
+
 Key Results
 •	Signup Conversion: A → 9.96%, B → 14.37% (+44.1% lift)
 •	Deposit Rate: A → 3.91%, B → 5.99% (+53.2% lift)
