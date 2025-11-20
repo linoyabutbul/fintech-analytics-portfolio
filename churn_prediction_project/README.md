@@ -25,12 +25,12 @@ Each row represents a user with behavior-based and demographic features:
 | is_premium | 1 = premium subscriber |
 | churn | 1 = churned, 0 = active |
 
-📌 **Churn definition:**  
+ **Churn definition:**  
 A user who has been inactive for **more than 45 days** is labeled as churned.
 
 ---
 
-## 🧮 Modeling Approach
+##  Modeling Approach
 
 ### Steps Performed:
 1. **Data preprocessing**
@@ -95,25 +95,6 @@ This indicates that the model separates churners from non-churners *perfectly*, 
    Session count is a strong retention factor.  
    → Encourage habit-forming behaviors.
 
----
-
-## Technologies Used
-
-- Python  
-- Pandas, NumPy  
-- Scikit-Learn (Logistic Regression, Pipeline, Preprocessing)  
-- Matplotlib & Seaborn  
-- Jupyter Notebook  
-
----
-
-## Files Included
-
-- `dataset_churnpredc.ipynb` – Full notebook with modeling steps  
-- `fintech_churn_dataset.csv` – FinTech churn dataset (50K users)  
-- `README.md` – Project documentation  
-
----
 
 ##  Summary
 
@@ -124,6 +105,3 @@ This project demonstrates:
 - Understanding of churn drivers  
 - Real-world FinTech insights  
 
-It is part of a broader **FinTech Analytics Portfolio**, which also includes:
-- **A/B Testing (Activation Funnel)**  
-- **Weekly Cohort Retention Analysis**
