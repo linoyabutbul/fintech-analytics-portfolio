@@ -1,1 +1,112 @@
-C
+# Fraud Detection – Machine Learning Model for Financial Risk
+
+This project builds a supervised Machine Learning model to detect fraudulent transactions in a FinTech environment.  
+The dataset consists of 50,000 synthetic transactions designed to simulate realistic fraud patterns used in payment systems, digital wallets and neobanks.
+
+The project includes:
+- Feature engineering  
+- Handling imbalanced data  
+- Random Forest modeling  
+- Threshold tuning  
+- Exploratory fraud analytics  
+- Feature importance  
+- Business insights  
+
+---
+
+## Dataset Description
+
+Each row represents a single transaction.  
+The dataset includes behavioral, contextual and risk-related features such as:
+
+- `transaction_amount`
+- `transaction_hour`
+- `transaction_country`
+- `location_distance_km`
+- `ip_risk_score`
+- `user_transaction_velocity`
+- `device_type`
+- `device_fingerprint`
+- `past_fraud_flag`
+- `is_fraud` (label: 1 = fraud)
+
+Fraud rate is ~4%, simulating a realistic imbalanced scenario.
+
+---
+
+##  Handling Imbalanced Data
+
+Initial models predicted only the majority class (non-fraud).  
+To improve fraud detection:
+
+- Applied `class_weight="balanced"`  
+- Tuned the decision threshold (0.3 → 0.2 → 0.15 → 0.10)  
+- Selected threshold = 0.10 for best recall–precision tradeoff  
+
+**Final performance (threshold = 0.10):**
+
+| Metric | Fraud Class (1) |
+|--------|------------------|
+| Precision | 6% |
+| Recall | 9% |
+| F1 | 7% |
+
+This reflects the classic fraud tradeoff—prefer recalling more fraud cases even at the cost of false positives.
+
+---
+
+##  Feature Importance (Random Forest)
+
+Top predictors identified:
+
+1. **transaction_amount** – Larger amounts highly correlated with fraud  
+2. **location_distance_km** – Large geo-distance indicates VPN/abnormal activity  
+3. **ip_risk_score** – High-risk IPs strongly tied to fraud  
+4. **transaction_hour** – Peak fraud between 00:00–04:00  
+5. **transaction_country** – Certain high-risk geos  
+6. **velocity (user_transaction_velocity)** – Bursty activity suggests bot/fraud attempts  
+7. **device_fingerprint** – High-risk devices  
+8. **past_fraud_flag** – Strong behavioral signal  
+
+---
+
+##  Fraud Insights (EDA)
+
+### Fraud by Country  
+High-risk regions: BR, NG, CN, UK  
+Low-risk region: IL (baseline)
+
+### Fraud by Hour  
+Significant peak during late-night hours (00–04).
+
+### Fraud by Velocity  
+Fraud rate spikes sharply for users with velocity ≥ 4.
+
+### Fraud by Device Type  
+Web transactions show slightly higher fraud risk than mobile.
+
+---
+
+##  Business Recommendations
+
+- Implement velocity-based rules (block or challenge)  
+- Strengthen fraud screening for high-risk geolocations  
+- Apply 2FA or step-up verification for night-time transactions  
+- Use IP risk scoring as part of real-time decisioning  
+- Monitor high-risk device fingerprints  
+- Apply strict limits for high-amount transactions  
+
+---
+
+##  Summary
+
+This project demonstrates:
+- Real-world fraud detection workflow  
+- Imbalanced classification handling  
+- Threshold optimization  
+- Behavioral analysis of fraud patterns  
+- Interpretable ML using feature importance  
+- Professional FinTech risk methodology  
+
+Perfect for a Data Analyst, Fraud Analyst, Risk Analyst or FinTech Product Analyst portfolio.
+
