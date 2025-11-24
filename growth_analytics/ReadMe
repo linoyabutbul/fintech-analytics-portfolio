@@ -1,0 +1,64 @@
+ Growth & Marketing Analytics – Campaign & Channel Performance
+
+This project analyzes marketing performance across multiple paid and organic acquisition channels for a FinTech product.
+It uses a synthetic dataset of 50,000 users and multiple campaigns, simulating a real Growth/Marketing analytics workflow — evaluating channel efficiency, ROI, LTV and CAC, and providing actionable insights.
+
+Dataset Overview
+Campaign-Level Data (df_campaigns)
+
+Each row represents a marketing campaign with:
+Spend
+Impressions
+Clicks
+Installs
+Signups
+Deposits
+Revenue
+CTR (Click Through Rate)
+CPC (Cost Per Click)
+CPA (Cost Per Signup)
+Conversion Rates
+ROAS (Return On Ad Spend)
+
+
+User-Level Data (df_users)
+Each row represents a user acquired through a specific channel:
+Acquisition date
+Channel (Facebook / Google / TikTok / YouTube / Influencers / Organic)
+Campaign name
+Country
+Device type
+Signup / Deposit actions
+Transaction count
+LTV (lifetime value)
+30-day retention
+The dataset is designed to mimic real-world behavior and CAC/LTV differences between channels.
+
+Key Visualizations :
+
+ROAS by Channel
+TikTok dominates performance with extremely high ROAS (~65).
+Facebook and Influencers also strong; Google underperforms.
+
+CPA (Cost per Signup) by Channel
+Google is the most expensive channel (~3.45).
+Facebook, TikTok, YouTube and Influencers show much lower CPA.
+
+Average LTV by Channel
+Organic and Influencers produce the highest-value users (~84–85).
+TikTok users have lower LTV but extremely high ROAS.
+
+
+Growth Insights
+
+TikTok provides the strongest ROI – extremely high ROAS, relatively low CPA.
+Google is expensive and inefficient – highest CPA, lowest ROAS.
+Facebook balances cost and return – strong ROAS and low CPA.
+Influencers deliver high-quality users – high LTV and solid ROAS.
+Organic users are the most valuable group – highest LTV, infinite ROAS (zero spend).
+
+Recommendation: Reallocate budget from Google → TikTok, Facebook, Influencers and invest in SEO/referrals to boost the high-value Organic segment.
+
+Summary
+
+This project simulates a full Growth Analytics workflow — measuring marketing effectiveness, diagnosing waste, optimizing spend, and recommending high-impact actions using data.
